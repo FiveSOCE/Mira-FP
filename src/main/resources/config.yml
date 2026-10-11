@@ -1,0 +1,15 @@
+# MVP hybrid actor control. Tab-list/player-skin renderer not yet implemented.
+movement:
+  interval-ticks: 30
+  wander-step: 1.5
+  default-radius: 8.0
+# Only IDs mapped here may be executed via /fp run <actor> <id>.
+# Each command is sent as console; do not include untrusted values.
+actions:
+  # example: "say [Mira-FP] An approved automated action"
+  example: "say [Mira-FP] Example approved action"
+chat:
+  prefix: "&8[Simulated] &7"
+  cooldown-seconds: 30
+  messages:
+    - "Enjoy your time on the server!"
