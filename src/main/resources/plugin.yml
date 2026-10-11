@@ -7,7 +7,6 @@ commands:
   fp:
     description: Administrator-only simulated actors
     usage: /fp
-permission:
 permissions:
   mirafp.admin:
     description: Manage fake actors and execute approved actions
