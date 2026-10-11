@@ -1,0 +1,14 @@
+name: Mira-FP
+main: com.fivesoce.mira.fp.MiraFP
+version: 0.1.0-dev
+api-version: '26.2'
+author: FiveSOCE
+commands:
+  fp:
+    description: Administrator-only simulated actors
+    usage: /fp
+permission:
+permissions:
+  mirafp.admin:
+    description: Manage fake actors and execute approved actions
+    default: op
