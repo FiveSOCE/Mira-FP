@@ -1,0 +1,36 @@
+name: Build and Publish Development JAR
+on:
+  push:
+    branches: ['feature/hybrid-26.2']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '25'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '9.2.1'
+      - name: Compile
+        run: gradle clean build --no-daemon
+      - name: Verify plugin JAR
+        run: |
+          test -s build/libs/Mira-FP-26.2-0.1.0-dev.jar
+          jar tf build/libs/Mira-FP-26.2-0.1.0-dev.jar | grep -Fx plugin.yml
+          jar tf build/libs/Mira-FP-26.2-0.1.0-dev.jar | grep -Fx com/fivesoce/mira/fp/MiraFP.class
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Mira-FP-26.2
+          path: build/libs/*.jar
+      - name: Publish prerelease
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view dev-26.2 >/dev/null 2>&1 || gh release create dev-26.2 --prerelease --title 'Mira-FP 26.2 development' --notes 'Hybrid foundation preview: armor-stand actors, movement, equipment, chat and controlled actions. Player skins and tab-list profiles are not yet implemented.' --target "$GITHUB_SHA"
+          gh release upload dev-26.2 build/libs/Mira-FP-26.2-0.1.0-dev.jar --clobber
