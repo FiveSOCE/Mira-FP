@@ -12,11 +12,11 @@ Mira-FP is intended to provide configurable fake player profiles, in-world model
 
 ## JAR Download
 
-The build workflow compiles and validates the JAR before publishing the development asset. The intended direct JAR link is below. **Only use it when the corresponding asset has been published and the CI run has succeeded:**
+The build workflow compiles and validates the JAR before publishing the development asset. **Verified direct JAR download:** The GitHub Actions build completed successfully and published the JAR as a release asset:
 
 [Mira-FP-26.2-0.1.0-dev.jar](https://github.com/FiveSOCE/Mira-FP/releases/download/dev-26.2/Mira-FP-26.2-0.1.0-dev.jar)
 
-**The above is a publication target, not proof the asset exists.** Check the GitHub release before downloading.
+The link above downloads the compiled development `.jar`, not a source ZIP or workflow page. Runtime functionality has not yet been independently verified.
 
 ## Requirements
 
