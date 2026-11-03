@@ -1,7 +1,7 @@
-name: Build and Publish Development JAR
+name: Build and Publish Mira-FP 1.18.2
 on:
   push:
-    branches: ['feature/hybrid-26.2']
+    branches: ['compat/1.18.2']
   workflow_dispatch:
 permissions:
   contents: write
@@ -13,24 +13,29 @@ jobs:
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: '25'
+          java-version: '17'
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '9.2.1'
       - name: Compile
         run: gradle clean build --no-daemon
-      - name: Verify plugin JAR
+      - name: Validate plugin JAR
+        shell: bash
         run: |
-          test -s build/libs/Mira-FP-26.2-0.1.0-dev.jar
-          jar tf build/libs/Mira-FP-26.2-0.1.0-dev.jar | grep -Fx plugin.yml
-          jar tf build/libs/Mira-FP-26.2-0.1.0-dev.jar | grep -Fx com/fivesoce/mira/fp/MiraFP.class
+          set -euo pipefail
+          JAR=build/libs/Mira-FP-1.18.2-0.1.0-dev.jar
+          test -s "$JAR"
+          jar tf "$JAR" | grep -Fx plugin.yml
+          jar tf "$JAR" | grep -Fx com/fivesoce/mira/fp/MiraFP.class
+          javap -verbose -classpath "$JAR" com.fivesoce.mira.fp.MiraFP | grep -F 'major version: 61'
       - uses: actions/upload-artifact@v4
         with:
-          name: Mira-FP-26.2
-          path: build/libs/*.jar
-      - name: Publish prerelease
+          name: Mira-FP-1.18.2
+          path: build/libs/Mira-FP-1.18.2-0.1.0-dev.jar
+          if-no-files-found: error
+      - name: Publish development JAR
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release view dev-26.2 >/dev/null 2>&1 || gh release create dev-26.2 --prerelease --title 'Mira-FP 26.2 development' --notes 'Hybrid foundation preview: armor-stand actors, movement, equipment, chat and controlled actions. Player skins and tab-list profiles are not yet implemented.' --target "$GITHUB_SHA"
-          gh release upload dev-26.2 build/libs/Mira-FP-26.2-0.1.0-dev.jar --clobber
+          gh release view dev-1.18.2 >/dev/null 2>&1 || gh release create dev-1.18.2 --prerelease --title 'Mira-FP 1.18.2 development' --notes 'Paper 1.18.2 / Java 17 compatibility preview. Armor stand stand-ins, not full player-shaped or tab-list fake players.' --target "$GITHUB_SHA"
+          gh release upload dev-1.18.2 build/libs/Mira-FP-1.18.2-0.1.0-dev.jar --clobber
