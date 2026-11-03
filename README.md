@@ -6,22 +6,23 @@ Mira-FP is intended to provide configurable fake player profiles, in-world model
 
 ## Current Release
 
-**v0.1.0-dev** — Paper/Minecraft **26.2**, Java **25**. **Development preview, not feature-complete.**
+**v0.1.0-dev** — separate development builds for **Paper 26.2 (Java 25)** and **Paper 1.18.2 (Java 17)**. **Development previews, not feature-complete.**
 
 [View releases](https://github.com/FiveSOCE/Mira-FP/releases)
 
-## JAR Download
+## JAR Downloads
 
-The build workflow compiles and validates the JAR before publishing the development asset. **Verified direct JAR download:** The GitHub Actions build completed successfully and published the JAR as a release asset:
+| Minecraft server | Java | JAR download | Source branch |
+| --- | --- | --- | --- |
+| Paper 26.2 | 25 | [Download Mira-FP-26.2-0.1.0-dev.jar](https://github.com/FiveSOCE/Mira-FP/releases/download/dev-26.2/Mira-FP-26.2-0.1.0-dev.jar) | [feature/hybrid-26.2](https://github.com/FiveSOCE/Mira-FP/tree/feature/hybrid-26.2) |
+| Paper 1.18.2 | 17 | **Pending verified release build** | [compat/1.18.2](https://github.com/FiveSOCE/Mira-FP/tree/compat/1.18.2) |
 
-[Mira-FP-26.2-0.1.0-dev.jar](https://github.com/FiveSOCE/Mira-FP/releases/download/dev-26.2/Mira-FP-26.2-0.1.0-dev.jar)
-
-The link above downloads the compiled development `.jar`, not a source ZIP or workflow page. Runtime functionality has not yet been independently verified.
+The 1.18.2 JAR will be linked directly once the Java 17 compatibility build passes and its GitHub release asset is verified. Use the JAR matching your server version. Both are early development builds with armor-stand stand-ins, not genuine player-model/tab-list bots.
 
 ## Requirements
 
-- Paper 26.2
-- Java 25
+- Paper 26.2 with Java 25, or Paper 1.18.2 with Java 17
+- Use the branch-specific JAR
 - No MiraCore dependency
 - No required third-party NPC plugin
 
@@ -93,7 +94,7 @@ Standalone by default. Optional integrations are planned, not yet implemented.
 gradle clean build
 ```
 
-JAR output: `build/libs/Mira-FP-26.2-0.1.0-dev.jar`.
+JAR output: `build/libs/Mira-FP-26.2-0.1.0-dev.jar` or `build/libs/Mira-FP-1.18.2-0.1.0-dev.jar`, depending on branch.
 
 ## License
 
