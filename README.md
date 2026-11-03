@@ -6,22 +6,24 @@ Mira-FP is intended to provide configurable fake player profiles, in-world model
 
 ## Current Release
 
-**v0.1.0-dev** — Paper/Minecraft **26.2**, Java **25**. **Development preview, not feature-complete.**
+**v0.1.0-dev** — Paper/Minecraft **1.18.2**, Java **17**. **Development preview, not feature-complete.**
 
 [View releases](https://github.com/FiveSOCE/Mira-FP/releases)
 
 ## JAR Download
 
-The build workflow compiles and validates the JAR before publishing the development asset. Once the prerelease is published and verified, the direct download will be:
+The dedicated 1.18.2 workflow compiles with Java 17 and validates the JAR before publishing it. The direct download is:
 
-[Mira-FP-26.2-0.1.0-dev.jar](https://github.com/FiveSOCE/Mira-FP/releases/download/dev-26.2/Mira-FP-26.2-0.1.0-dev.jar)
+[Mira-FP-1.18.2-0.1.0-dev.jar](https://github.com/FiveSOCE/Mira-FP/releases/download/dev-1.18.2/Mira-FP-1.18.2-0.1.0-dev.jar)
 
-**The above is a publication target, not proof the asset exists.** Check the GitHub release before downloading.
+**Development preview:** Use the link only after its build passes and GitHub publishes the release asset. Compilation does not establish in-game NPC or tab-list functionality.
+
+For the modern version, use the [26.2 development branch](https://github.com/FiveSOCE/Mira-FP/tree/feature/hybrid-26.2). Do not install the 26.2 JAR on a 1.18.2 server.
 
 ## Requirements
 
-- Paper 26.2
-- Java 25
+- Paper 1.18.2
+- Java 17
 - No MiraCore dependency
 - No required third-party NPC plugin
 
@@ -93,7 +95,7 @@ Standalone by default. Optional integrations are planned, not yet implemented.
 gradle clean build
 ```
 
-JAR output: `build/libs/Mira-FP-26.2-0.1.0-dev.jar`.
+JAR output: `build/libs/Mira-FP-1.18.2-0.1.0-dev.jar`.
 
 ## License
 
