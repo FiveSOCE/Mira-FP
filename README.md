@@ -15,9 +15,9 @@ Mira-FP is intended to provide configurable fake player profiles, in-world model
 | Minecraft server | Java | JAR download | Source branch |
 | --- | --- | --- | --- |
 | Paper 26.2 | 25 | [Download Mira-FP-26.2-0.1.0-dev.jar](https://github.com/FiveSOCE/Mira-FP/releases/download/dev-26.2/Mira-FP-26.2-0.1.0-dev.jar) | [feature/hybrid-26.2](https://github.com/FiveSOCE/Mira-FP/tree/feature/hybrid-26.2) |
-| Paper 1.18.2 | 17 | **Pending verified release build** | [compat/1.18.2](https://github.com/FiveSOCE/Mira-FP/tree/compat/1.18.2) |
+| Paper 1.18.2 | 17 | [Download Mira-FP-1.18.2-0.1.0-dev.jar](https://github.com/FiveSOCE/Mira-FP/releases/download/dev-1.18.2/Mira-FP-1.18.2-0.1.0-dev.jar) | [compat/1.18.2](https://github.com/FiveSOCE/Mira-FP/tree/compat/1.18.2) |
 
-The 1.18.2 JAR will be linked directly once the Java 17 compatibility build passes and its GitHub release asset is verified. Use the JAR matching your server version. Both are early development builds with armor-stand stand-ins, not genuine player-model/tab-list bots.
+Both development JARs passed GitHub Actions compilation and have verified direct GitHub release asset links. The 1.18.2 JAR was validated as Java 17 bytecode; in-game runtime testing remains outstanding. Use the JAR matching your server version. Both are early development builds with armor-stand stand-ins, not genuine player-model/tab-list bots.
 
 ## Requirements
 
