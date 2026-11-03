@@ -5,6 +5,7 @@ repositories {
     mavenCentral()
     maven("https://repo.papermc.io/repository/maven-public/")
 }
-dependencies { compileOnly("io.papermc.paper:paper-api:26.2.build.+") }
-java { toolchain.languageVersion.set(JavaLanguageVersion.of(25)) }
-tasks.jar { archiveBaseName.set("Mira-FP-26.2") }
+dependencies { compileOnly("io.papermc.paper:paper-api:1.18.2-R0.1-SNAPSHOT") }
+java { toolchain.languageVersion.set(JavaLanguageVersion.of(17)) }
+tasks.withType<JavaCompile>().configureEach { options.release.set(17) }
+tasks.jar { archiveBaseName.set("Mira-FP-1.18.2") }
