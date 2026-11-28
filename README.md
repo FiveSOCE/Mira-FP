@@ -4,12 +4,6 @@ Administrator-controlled simulated actors for the Mira Paper server suite.
 
 Mira-FP is intended to provide configurable fake player profiles, in-world models, tab-list representation, equipment, ranks, tags, virtual inventories, chat, movement and approved integrations. This is a **hybrid** design: presentation and scripted behaviours are separated from server-side plugin interactions.
 
-## Current Release
-
-**v0.1.0-dev** — separate development builds for **Paper 26.2 (Java 25)** and **Paper 1.18.2 (Java 17)**. **Development previews, not feature-complete.**
-
-[View releases](https://github.com/FiveSOCE/Mira-FP/releases)
-
 ## Downloads and compatibility
 
 | Server target | Java | Final JAR name | Download |
@@ -22,6 +16,13 @@ Mira-FP is intended to provide configurable fake player profiles, in-world model
 **Installation:** Back up plugin data, remove older JAR copies and install only the build matching your server. Never install both builds together.
 
 [Legacy source](https://github.com/FiveSOCE/Mira-FP/tree/compat/1.18.2) · [Modern source](https://github.com/FiveSOCE/Mira-FP) · [All releases](https://github.com/FiveSOCE/Mira-FP/releases)
+
+
+## Development status
+
+**v0.1.0-dev** — separate development builds for **Paper 26.2 (Java 25)** and **Paper 1.18.2 (Java 17)**. **Development previews, not feature-complete.**
+
+[View releases](https://github.com/FiveSOCE/Mira-FP/releases)
 
 ## Requirements
 
