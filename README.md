@@ -17,7 +17,9 @@ Mira-FP is intended to provide configurable fake player profiles, in-world model
 | **Paper 1.18.2** | 17 | `MiraFP_1.18.2.jar` | [Download 1.18.2 JAR](https://github.com/FiveSOCE/Mira-FP/releases/download/dev-1.18.2/MiraFP_1.18.2.jar) |
 | **Paper 1.21.11–26.2 / modern target** | Java 21 baseline; Paper 26.2 may require Java 25 | `Mira-FP-26.2-0.1.0-dev.jar` | [Download modern JAR](https://github.com/FiveSOCE/Mira-FP/releases/download/dev-26.2/Mira-FP-26.2-0.1.0-dev.jar) |
 
-Install only one versioned JAR. A successful compilation is not a guarantee of in-game feature compatibility.
+**Build status:** Version-specific direct links are provided where published. A GitHub Actions or Releases link means the corresponding versioned JAR has not been verified. Compilation alone does not establish in-game compatibility; intermediate versions 1.19–1.21.10 remain unverified unless specifically documented.
+
+**Installation:** Back up plugin data, remove older JAR copies and install only the build matching your server. Never install both builds together.
 
 [Legacy source](https://github.com/FiveSOCE/Mira-FP/tree/compat/1.18.2) · [Modern source](https://github.com/FiveSOCE/Mira-FP) · [All releases](https://github.com/FiveSOCE/Mira-FP/releases)
 
