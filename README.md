@@ -10,14 +10,16 @@ Mira-FP is intended to provide configurable fake player profiles, in-world model
 
 [View releases](https://github.com/FiveSOCE/Mira-FP/releases)
 
-## JAR Downloads
+## Downloads and compatibility
 
-| Minecraft server | Java | JAR download | Source branch |
+| Server target | Java | Final JAR name | Download |
 | --- | --- | --- | --- |
-| Paper 26.2 | 25 | [Download Mira-FP-26.2-0.1.0-dev.jar](https://github.com/FiveSOCE/Mira-FP/releases/download/dev-26.2/Mira-FP-26.2-0.1.0-dev.jar) | [feature/hybrid-26.2](https://github.com/FiveSOCE/Mira-FP/tree/feature/hybrid-26.2) |
-| Paper 1.18.2 | 17 | [Download Mira-FP-1.18.2-0.1.0-dev.jar](https://github.com/FiveSOCE/Mira-FP/releases/download/dev-1.18.2/Mira-FP-1.18.2-0.1.0-dev.jar) | [compat/1.18.2](https://github.com/FiveSOCE/Mira-FP/tree/compat/1.18.2) |
+| **Paper 1.18.2** | 17 | `MiraFP_1.18.2.jar` | [Download 1.18.2 JAR](https://github.com/FiveSOCE/Mira-FP/releases/download/dev-1.18.2/MiraFP_1.18.2.jar) |
+| **Paper 1.21.11–26.2 / modern target** | Java 21 baseline; Paper 26.2 may require Java 25 | `Mira-FP-26.2-0.1.0-dev.jar` | [Download modern JAR](https://github.com/FiveSOCE/Mira-FP/releases/download/dev-26.2/Mira-FP-26.2-0.1.0-dev.jar) |
 
-Both development JARs passed GitHub Actions compilation and have verified direct GitHub release asset links. The 1.18.2 JAR was validated as Java 17 bytecode; in-game runtime testing remains outstanding. Use the JAR matching your server version. Both are early development builds with armor-stand stand-ins, not genuine player-model/tab-list bots.
+Install only one versioned JAR. A successful compilation is not a guarantee of in-game feature compatibility.
+
+[Legacy source](https://github.com/FiveSOCE/Mira-FP/tree/compat/1.18.2) · [Modern source](https://github.com/FiveSOCE/Mira-FP) · [All releases](https://github.com/FiveSOCE/Mira-FP/releases)
 
 ## Requirements
 
@@ -88,14 +90,12 @@ actors.yml - stored profiles, positions, display text and equipment
 
 Standalone by default. Optional integrations are planned, not yet implemented.
 
-## Building
-
-```bash
-gradle clean build
-```
-
-JAR output: `build/libs/Mira-FP-26.2-0.1.0-dev.jar` or `build/libs/Mira-FP-1.18.2-0.1.0-dev.jar`, depending on branch.
-
 ## License
 
 Copyright © 2026 FiveSOCE. **All Rights Reserved.** See [LICENSE](LICENSE).
+
+## Dependencies and installation
+
+- **Required:** No mandatory plugin dependencies declared; matching Paper version and Java runtime.
+- **Optional integrations:** None declared.
+- Back up plugin data, remove old JARs, and restart after installing the appropriate release.
